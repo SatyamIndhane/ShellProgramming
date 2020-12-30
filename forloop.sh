@@ -6,6 +6,7 @@ do
 	if [ -d $folderName ]
 	then
 		rm -R $folderName
+		echo $foldername is created
 	fi
 
 	mkdir $folderName;
