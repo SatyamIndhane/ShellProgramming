@@ -6,7 +6,7 @@ do
 	if [ -d $folderName ]
 	then
 		rm -R $folderName
-		echo $foldername is created
+		echo $foldername is deleted
 	fi
 
 	mkdir $folderName;
