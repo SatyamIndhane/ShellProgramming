@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-read -p "Enter a single digit number: "x;
+read -p "Enter a single digit number:" x;
 
 if [ $x -eq 1 ]
 then
@@ -26,7 +26,7 @@ then
 elif [ $x -eq 8 ]
 then
 	echo Eight
-elif [ $x eq 9 ]
+elif [ $x -eq 9 ]
 then
 	echo Nine
 else
