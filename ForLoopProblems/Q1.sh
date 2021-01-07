@@ -1,8 +1,8 @@
 #!/bin/bash -x
 
-read -p "Enter a whole number: " x;
+echo "Enter a whole number: $1";
 
-for (( counter=0; counter<=x; counter++ ))
+for (( counter=0; counter<=$1; counter++ ))
 do
 	var=$((2**$counter))
 	printf "$counter = $var\n"

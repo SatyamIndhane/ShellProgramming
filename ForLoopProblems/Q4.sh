@@ -1,15 +1,22 @@
-#!/bin/bash -x
+#!/bin/bash
 
 read -p "Enter first number: " x;
 read -p "Enter second number: " y;
 
 for (( counter=x; counter<y; counter++ ))
 do
-	for (( base=2; base<; base++ ))
+	flag=0
+	for (( base=2; base<x; base++ ))
 	do
-		if (( $base%$counter==0 ))
+		if (( $counter%$base==0 ))
 		then
+			flag=1
+			break
 		fi
 	done
+	if (( flag==0 ))
+	then
+		echo $counter
+	fi
 done
 
