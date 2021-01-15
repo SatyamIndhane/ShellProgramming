@@ -3,7 +3,7 @@
 read -p "Enter first number: " x;
 read -p "Enter second number: " y;
 
-for (( counter=x; counter<y; counter++ ))
+for (( counter=x+1; counter<y; counter++ ))
 do
 	flag=0
 	for (( base=2; base<x; base++ ))

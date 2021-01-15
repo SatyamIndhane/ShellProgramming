@@ -1,4 +1,4 @@
-#!/bin/bash -x
+[A#!/bin/bash -x
 
 read -p "Enter First Random Three Digit Value : " R1;
 read -p "Enter Second Random Three Digit Value : " R2;

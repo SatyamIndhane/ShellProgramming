@@ -4,7 +4,7 @@ read -p "Enter a year: " x;
 
 if [ $x > '999' ]
 then
-	if(( $x%'4' == '0' && $x%'100' != '0' ))
+	if(( $x%'4' == '0' && $x%'100' != '0' || $x%'400' == '0'))
 	then
 		echo It is a leap year
 	else
