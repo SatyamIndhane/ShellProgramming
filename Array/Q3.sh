@@ -2,14 +2,15 @@
 
 #Variables
 flag=0
+location=0
 
-echo "Enter a whole number: $1";
+read -p "Enter a whole number:" x;
 
 
-for (( counter=2; counter<=$1; counter++ ))
+for (( counter=2; counter<=x; counter++ ))
 do
 	flag=1
-	if (( $1%$counter == 0 ))
+	if (( $x%$counter == 0 ))
 	then
 		if (( counter==2 ))
 		then
@@ -25,7 +26,9 @@ do
 		done
 		if (( flag==1 ))
 		then
-			echo $counter
+			ans[$((location++))]=$counter
 		fi
 	fi
 done
+
+echo ${ans[@]}
