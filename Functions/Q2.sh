@@ -1,13 +1,24 @@
 #!/bin/bash -x
 
-echo "Enter a farhenhiet value : $1"
+read -p "Enter the first number:" x;
+read -p "Enter the second number:" y;
 
-
-function convToDegC() {
-	val=`echo "scale=3; ($1-32)*(5/9) " | bc`
-	echo $val
+function palindrome(){
+   local n=$1
+   while (( $n>0 ))
+   do
+      local one=$(( n%10 ))
+      local n=$(( n/10 ))
+      local rev="$rev$one"
+   done
+	echo $rev
 }
 
-result="$( convToDegC $1 )"
+result="$( palindrome $x )"
 
-echo $result
+if (( result == y ))
+then
+	echo They are palindrome
+else
+	echo They are not palindrome
+fi
